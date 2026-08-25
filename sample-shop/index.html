@@ -4,54 +4,78 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Henry Street Pie (sample)</title>
-  <meta name="description" content="Sample offer page by Greenfield Consulting. Not a real shop. Not a client.">
+  <meta name="description" content="Sample offer page by Greenfield Consulting. Not a real shop. Hours, line, pies, and a phone number on one page.">
+  <meta name="theme-color" content="#1a1410">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <p class="sample">Sample page by Greenfield Consulting. Not a real shop. We did not build this for a client.</p>
+  <p class="sample">Sample by Greenfield Consulting. Not a real shop. Not a client.</p>
 
-  <header class="top">
-    <p class="name">Henry Street Pie</p>
-    <p class="tag">Carroll Gardens. Walk in. Cash only.</p>
+  <header class="mast">
+    <p class="mark" aria-hidden="true">H</p>
+    <h1>Henry Street Pie</h1>
+    <p class="place">Carroll Gardens, Brooklyn</p>
   </header>
 
-  <figure class="photo">
-    <img src="pie.jpg" alt="A thin pie, sliced. Sample photo. Not from a real shop.">
+  <figure class="hero-photo">
+    <img src="pie.jpg" width="1600" height="1067" alt="A thin pie on a wood board. Sample photo. Not from a real shop.">
   </figure>
 
   <main>
-    <section class="hero">
-      <h1>Thin pies. Long line. Worth it.</h1>
-      <p>Come at 4 if you want a seat. Kitchen at 5. Closed Tuesday.</p>
+    <section class="lede">
+      <p class="kicker">Tonight</p>
+      <h2>Come at 4 if you want a seat. Kitchen at 5.</h2>
+      <p class="closed">Closed Tuesday.</p>
     </section>
 
-    <section class="tonight">
-      <h2>Tonight</h2>
-      <ul class="facts">
-        <li><span>Where</span> 500 Henry Street, Brooklyn</li>
-        <li><span>Hours</span> 5pm to 11pm. Closed Tuesday.</li>
-        <li><span>Line</span> Waitlist starts at 4pm. No reservations.</li>
-        <li><span>Pay</span> Cash only. BYOB.</li>
-        <li><span>Takeout</span> From 4pm. Call or walk up.</li>
-        <li><span>Phone</span> <a href="tel:+17185550144">718.555.0144</a></li>
+    <section class="card" aria-labelledby="hours-title">
+      <h3 id="hours-title">Hours</h3>
+      <table class="hours">
+        <caption class="sr">Weekly hours</caption>
+        <tbody>
+          <tr><th scope="row">Sunday</th><td>5pm to 11pm</td></tr>
+          <tr><th scope="row">Monday</th><td>5pm to 11pm</td></tr>
+          <tr class="off"><th scope="row">Tuesday</th><td>Closed</td></tr>
+          <tr><th scope="row">Wednesday</th><td>5pm to 11pm</td></tr>
+          <tr><th scope="row">Thursday</th><td>5pm to 11pm</td></tr>
+          <tr><th scope="row">Friday</th><td>5pm to 11pm</td></tr>
+          <tr><th scope="row">Saturday</th><td>5pm to 11pm</td></tr>
+        </tbody>
+      </table>
+      <ul class="rules">
+        <li>Waitlist starts at 4pm. No reservations.</li>
+        <li>Cash only. BYOB.</li>
+        <li>Takeout from 4pm. Call or walk up.</li>
       </ul>
-      <p class="map"><a href="https://maps.google.com/?q=500+Henry+Street+Brooklyn">Open map</a></p>
     </section>
 
-    <section>
-      <h2>Pies</h2>
-      <ul class="prices">
-        <li><span>Large pie with basil</span> $32</li>
-        <li><span>Large calzone</span> $29</li>
-        <li><span>Small pie</span> $24</li>
+    <section class="actions" aria-label="Get here">
+      <p class="addr">500 Henry Street, Brooklyn</p>
+      <div class="btns">
+        <a class="btn" href="https://maps.google.com/?q=500+Henry+Street+Brooklyn">Map</a>
+        <a class="btn primary" href="tel:+17185550144">718.555.0144</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="line-title">
+      <h3 id="line-title">How the line works</h3>
+      <p>If you want a table, get here at 4 and put your name on the paper. We start seating when the kitchen opens. If the sidewalk is full, we stop taking names. Takeout skips the waitlist. Call first so you do not walk into a dead hour.</p>
+    </section>
+
+    <section aria-labelledby="pies-title">
+      <h3 id="pies-title">Pies</h3>
+      <ul class="menu">
+        <li><span>Large pie with basil</span> <b>$32</b></li>
+        <li><span>Large calzone</span> <b>$29</b></li>
+        <li><span>Small pie</span> <b>$24</b></li>
       </ul>
       <p class="note">Sample prices. A real page uses the shop's menu.</p>
     </section>
-
-    <section class="close">
-      <h2>Next</h2>
-      <p>Show up at 4. Or call <a href="tel:+17185550144">718.555.0144</a> for takeout.</p>
-    </section>
   </main>
+
+  <footer>
+    <p>This page is a sample of a $750 offer page. Greenfield Consulting built it. Henry Street Pie does not exist.</p>
+  </footer>
 </body>
 </html>
