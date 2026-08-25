@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Records Forever (sample)</title>
+  <meta name="description" content="Sample offer page by Greenfield Consulting. Not Records Forever's site. Not a client. Hours, address, and how to sell on one page.">
+  <meta name="theme-color" content="#16120e">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <p class="sample">Sample by Greenfield Consulting. Not Records Forever's site. Not a client.</p>
+
+  <header class="mast">
+    <p class="mark" aria-hidden="true">R</p>
+    <h1>Records Forever</h1>
+    <p class="place">Fairmount, Philadelphia</p>
+  </header>
+
+  <figure class="hero-photo">
+    <img src="vinyl.jpg" width="1600" height="1066" alt="A wood turntable with a record on. Sample photo. Not from Records Forever.">
+  </figure>
+
+  <main>
+    <section class="lede">
+      <p class="kicker">Hours</p>
+      <h2>Open 11. Sunday we close at 5.</h2>
+      <p class="everyday">Open every day.</p>
+    </section>
+
+    <section class="card" aria-labelledby="hours-title">
+      <h3 id="hours-title">This week</h3>
+      <table class="hours">
+        <caption class="sr">Weekly hours</caption>
+        <tbody>
+          <tr data-day="0"><th scope="row">Sunday</th><td>11am to 5pm</td></tr>
+          <tr data-day="1"><th scope="row">Monday</th><td>11am to 7pm</td></tr>
+          <tr data-day="2"><th scope="row">Tuesday</th><td>11am to 7pm</td></tr>
+          <tr data-day="3"><th scope="row">Wednesday</th><td>11am to 7pm</td></tr>
+          <tr data-day="4"><th scope="row">Thursday</th><td>11am to 7pm</td></tr>
+          <tr data-day="5"><th scope="row">Friday</th><td>11am to 7pm</td></tr>
+          <tr data-day="6"><th scope="row">Saturday</th><td>11am to 7pm</td></tr>
+        </tbody>
+      </table>
+      <ul class="rules">
+        <li>Drop in. No appointment to sell.</li>
+        <li>Street parking is usually easy. There is a paid lot nearby.</li>
+        <li>House calls if the collection is too big to carry.</li>
+      </ul>
+    </section>
+
+    <section class="actions" aria-label="Get here">
+      <p class="addr">2036 Fairmount Avenue, Philadelphia</p>
+      <div class="btns">
+        <a class="btn" href="https://maps.google.com/?q=2036+Fairmount+Avenue+Philadelphia+PA+19130">Map</a>
+        <a class="btn primary" href="tel:+12152523539">215.252.3539</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="sell-title">
+      <h3 id="sell-title">Sell us your records</h3>
+      <p>We buy vinyl, CDs, and cassettes. Walk in. If you cannot carry the pile, write or call and we will come to you.</p>
+      <p class="follow"><a href="mailto:hello@recordsforevershop.com">hello@recordsforevershop.com</a></p>
+    </section>
+
+    <section aria-labelledby="cards-title">
+      <h3 id="cards-title">Gift cards and orders</h3>
+      <p>We sell gift cards. If a title is in print and not in the bin, we will order it.</p>
+    </section>
+
+    <section aria-labelledby="carry-title">
+      <h3 id="carry-title">Decks</h3>
+      <p>New Audio-Technica turntables, and used decks we have already serviced.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>This page is a sample of a $750 offer page. Greenfield Consulting built it. This is not Records Forever's site. They are not a client. If this were yours.</p>
+    <p>Hours and the rest are from their public page on August 25, 2026. We are not affiliated.</p>
+  </footer>
+
+  <script>
+    (function () {
+      var day = new Date().getDay();
+      var row = document.querySelector('.hours tr[data-day="' + day + '"]');
+      if (row) row.classList.add("today");
+    })();
+  </script>
+</body>
+</html>
