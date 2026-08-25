@@ -1,9 +1,10 @@
 :root {
-  --bg: #f4f1ea;
-  --ink: #1c241c;
-  --green: #2f4f3e;
-  --muted: #5a655c;
-  --line: #d5d0c6;
+  --bg: #f3efe6;
+  --ink: #1b221b;
+  --green: #2c4a3b;
+  --muted: #5c655e;
+  --line: #d4cfc4;
+  --paper: #fbf8f1;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
@@ -15,57 +16,80 @@ body {
 }
 .sample {
   margin: 0;
-  padding: 0.55rem 8vw;
+  padding: 0.6rem 1.5rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  background: #2f4f3e;
-  color: #f4f1ea;
+  background: var(--green);
+  color: #f3efe6;
 }
 .top {
-  padding: 2.2rem 8vw 1.2rem;
-  border-bottom: 1px solid var(--line);
+  padding: 1.8rem 1.5rem 1.2rem;
+  max-width: 40rem;
+  margin: 0 auto;
 }
 .name {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.82rem;
-  color: var(--green);
+  font-size: 1.85rem;
+  line-height: 1.15;
+  font-weight: normal;
 }
-.tag { margin: 0.4rem 0 0; color: var(--muted); }
-main { padding: 2.4rem 8vw 5rem; max-width: 42rem; }
+.tag { margin: 0.45rem 0 0; color: var(--muted); }
+.photo {
+  margin: 0;
+}
+.photo img {
+  display: block;
+  width: 100%;
+  height: 16.5rem;
+  object-fit: cover;
+  object-position: center 40%;
+}
+main {
+  padding: 2rem 1.5rem 5rem;
+  max-width: 40rem;
+  margin: 0 auto;
+}
 .hero h1 {
   font-weight: normal;
-  font-size: 2.1rem;
+  font-size: 1.85rem;
   line-height: 1.25;
-  margin: 0 0 0.8rem;
+  margin: 0 0 0.65rem;
 }
-.hero p, section p { font-size: 1.12rem; color: var(--muted); }
+.hero p, section p { margin: 0; color: var(--muted); }
 h2 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--green);
-  margin: 2.4rem 0 0.7rem;
+  margin: 2.1rem 0 0.65rem;
 }
-ul { padding-left: 1.2rem; margin: 0; }
+.tonight {
+  margin-top: 1.6rem;
+  padding: 1.1rem 1.2rem 1.2rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+.tonight h2 { margin-top: 0; }
 .facts, .prices {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 .facts li, .prices li {
   display: flex;
   justify-content: space-between;
-  gap: 1.5rem;
-  padding: 0.45rem 0;
+  gap: 1.4rem;
+  padding: 0.5rem 0;
   border-bottom: 1px solid var(--line);
 }
-.facts span, .prices span { color: var(--muted); min-width: 5rem; }
+.facts li:last-child, .prices li:last-child { border-bottom: 0; }
+.facts span, .prices span { color: var(--muted); min-width: 4.6rem; }
+.map { margin-top: 0.9rem; }
+.note { margin-top: 0.7rem; font-size: 0.95rem; }
 a { color: var(--green); }
-@media (max-width: 600px) {
-  .hero h1 { font-size: 1.65rem; }
-  .top, main, .sample { padding-left: 1.4rem; padding-right: 1.4rem; }
+.close p { font-size: 1.15rem; color: var(--ink); }
+@media (min-width: 720px) {
+  .photo img { height: 20rem; }
+  .name, .hero h1 { font-size: 2.1rem; }
 }
