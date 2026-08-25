@@ -1,0 +1,274 @@
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/fraunces-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/fraunces-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/source-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/source-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/source-400i.woff2") format("woff2");
+}
+
+:root {
+  --bg: #d9d5cc;
+  --ink: #1b1c19;
+  --paper: #f4f0e6;
+  --muted: #5b584f;
+  --line: #c3beb2;
+  --stamp: #7a2a32;
+  --night: #22241f;
+  --night-paper: #ece6d8;
+  --night-mute: #b7b2a4;
+  --night-line: #3c3e38;
+  --btn: #1b1c19;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: "Source Sans 3", "Helvetica Neue", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+  font-size: 1.05rem;
+}
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.sample {
+  margin: 0;
+  padding: 0.55rem 1.4rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  background: #1b1c19;
+  color: #d9d5cc;
+}
+.mast {
+  padding: 2.5rem 1.4rem 1.7rem;
+  text-align: center;
+}
+.mark {
+  margin: 0 auto 0.75rem;
+  width: 1.85rem;
+  height: 1.85rem;
+  border: 1px solid var(--ink);
+  display: grid;
+  place-items: center;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+.mast h1 {
+  margin: 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2.15rem, 8vw, 3.35rem);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+}
+.place {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+}
+.hero-photo { margin: 0; }
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+  object-position: center 46%;
+}
+main {
+  width: min(38rem, calc(100% - 2.4rem));
+  margin: 0 auto;
+  padding: 2.15rem 0 3rem;
+}
+.lede { margin-bottom: 1.7rem; }
+.kicker {
+  margin: 0 0 0.45rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stamp);
+  font-weight: 600;
+}
+.lede h2 {
+  margin: 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  line-height: 1.22;
+}
+.closed {
+  margin: 0.55rem 0 0;
+  font-style: italic;
+  color: var(--stamp);
+}
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 1.15rem 1.2rem 1.25rem;
+}
+.card.bar {
+  background: var(--night);
+  border-color: var(--night);
+  color: var(--night-paper);
+}
+h3 {
+  margin: 0 0 0.7rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+.card.bar h3 { color: var(--night-mute); }
+.bar-lede {
+  margin: 0 0 1rem;
+  color: var(--night-paper);
+}
+section + section { margin-top: 1.7rem; }
+.hours {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.02rem;
+}
+.hours th {
+  font-weight: 400;
+  text-align: left;
+  padding: 0.42rem 0.6rem 0.42rem 0;
+  color: var(--muted);
+}
+.hours td {
+  text-align: right;
+  padding: 0.42rem 0;
+}
+.hours tr { border-bottom: 1px solid var(--line); }
+.hours tr:last-child { border-bottom: 0; }
+.hours tr.off th,
+.hours tr.off td {
+  color: var(--stamp);
+  font-style: italic;
+}
+.hours tr.today th,
+.hours tr.today td {
+  color: var(--ink);
+  font-weight: 600;
+  font-style: normal;
+}
+.hours tr.today.off th,
+.hours tr.today.off td {
+  color: var(--stamp);
+  font-style: italic;
+}
+.when {
+  margin-left: 0.4rem;
+  font-family: "Source Sans 3", "Helvetica Neue", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--stamp);
+  vertical-align: 0.08em;
+}
+.card.bar .hours th { color: var(--night-mute); }
+.card.bar .hours td { color: var(--night-paper); }
+.card.bar .hours tr { border-bottom-color: var(--night-line); }
+.card.bar .hours tr.today th,
+.card.bar .hours tr.today td {
+  color: #fff8ea;
+}
+.card.bar .when { color: #e3c4a0; }
+.clubs {
+  display: inline-block;
+  margin-left: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--night-mute);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.hours tr.today .clubs { font-weight: 400; }
+.actions .addr {
+  margin: 0 0 0.85rem;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.28rem;
+  line-height: 1.25;
+}
+.btns {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+.btn {
+  flex: 1 1 8rem;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid var(--btn);
+  color: var(--btn);
+  padding: 0.72rem 1rem;
+  font-weight: 600;
+  min-height: 2.75rem;
+}
+.btn.primary {
+  background: var(--btn);
+  color: var(--bg);
+}
+.btn:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--stamp);
+  outline-offset: 3px;
+}
+section p { margin: 0; color: var(--ink); }
+section a {
+  color: var(--ink);
+  font-weight: 600;
+}
+footer {
+  padding: 1.3rem 1.4rem 2.4rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+footer p { margin: 0 auto 0.65rem; max-width: 38rem; }
+footer p:last-child { margin-bottom: 0; }
+
+@media (min-width: 720px) {
+  .hero-photo img { height: 24rem; }
+  main { padding-top: 2.65rem; }
+  .card + .card { margin-top: 1.15rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto; }
+}
