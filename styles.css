@@ -230,3 +230,6 @@ footer p:last-child { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto; }
 }
+
+.sample.text { grid-template-columns: 1fr; }
+.sample.text img { display: none; }
