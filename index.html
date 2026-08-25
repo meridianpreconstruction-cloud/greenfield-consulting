@@ -4,61 +4,87 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Greenfield Consulting</title>
-  <meta name="description" content="Greenfield Consulting. One-page sites, market briefs, and lead lists for small teams. Fixed price. Finished piece.">
+  <meta name="description" content="Greenfield Consulting. One-page sites, market briefs, and lead lists. Fixed price. You get the finished piece.">
+  <meta name="theme-color" content="#24382c">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="top">
-    <img class="mark" src="tree.jpg" width="720" height="480" alt="A large oak standing in a green field at sunrise.">
+  <header class="mast">
     <p class="name">Greenfield Consulting</p>
     <p class="tag">Websites, research, and outreach for small teams</p>
   </header>
 
+  <figure class="hero-photo">
+    <img src="tree.jpg" width="720" height="480" alt="A large oak in a green field at sunrise.">
+  </figure>
+
   <main>
-    <section class="hero">
+    <section class="lede">
+      <p class="kicker">The work</p>
       <h1>You already know what you sell.</h1>
-      <p>You need the page, the brief, or the list finished so you can go talk to people.</p>
+      <p class="sub">You need the page, the brief, or the list finished so you can go talk to people.</p>
     </section>
 
-    <section>
-      <h2>What we sell</h2>
-      <p>Simple websites and offer pages. Market or competitor briefs. Lead lists with first emails you can send. Light automations when they save you a step.</p>
-      <p>Fixed price. You get the finished piece.</p>
-    </section>
-
-    <section>
-      <h2>Starting prices</h2>
+    <section class="card" aria-labelledby="prices-title">
+      <h2 id="prices-title">Starting prices</h2>
       <ul class="prices">
-        <li><span>Offer page</span> $750</li>
-        <li><span>Market or competitor brief</span> $500</li>
-        <li><span>Lead list and first emails</span> $600</li>
+        <li>
+          <span>
+            <b>Offer page</b>
+            <i>Copy and a live one-page site. About 3 to 5 days.</i>
+          </span>
+          <strong>$750</strong>
+        </li>
+        <li>
+          <span>
+            <b>Market brief</b>
+            <i>Who is in the space, what they charge if it is public, what to do this month.</i>
+          </span>
+          <strong>$500</strong>
+        </li>
+        <li>
+          <span>
+            <b>Lead list and first emails</b>
+            <i>Accounts from public pages. A first note that does not sound like a blast.</i>
+          </span>
+          <strong>$600</strong>
+        </li>
       </ul>
-      <p>Those are honest starting calls. A bigger job gets its own number once we see the work.</p>
+      <p class="note">Those are honest starting calls. A bigger job gets its own number once we see the work.</p>
     </section>
 
-    <section>
-      <h2>How it works</h2>
-      <ol>
+    <section aria-labelledby="sample-title">
+      <h2 id="sample-title">A page like the $750 job</h2>
+      <p>Henry Street Pie is a labeled sample. Not a real shop. It is the kind of page we build: hours, the next step, and nothing extra.</p>
+      <p class="more"><a href="sample-shop/">See the sample</a></p>
+    </section>
+
+    <section aria-labelledby="how-title">
+      <h2 id="how-title">How it works</h2>
+      <ol class="steps">
         <li>Tell us the job in plain language.</li>
         <li>We send a short scope and a number.</li>
-        <li>You get the work.</li>
+        <li>You pay. Then you get the finished piece.</li>
       </ol>
     </section>
 
-    <section id="refunds">
-      <h2>Refunds</h2>
+    <section class="actions" aria-labelledby="talk-title">
+      <h2 id="talk-title">Talk to us</h2>
+      <p class="addr">Write and say what you need finished.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:meridian.preconstruction@gmail.com">meridian.preconstruction@gmail.com</a>
+      </div>
+    </section>
+
+    <section id="refunds" aria-labelledby="refunds-title">
+      <h2 id="refunds-title">Refunds</h2>
       <p>You pay before we start. If we have not started, you get a full refund. If we started and you stop, you get the unused part back. If the finished piece is wrong, we fix it once at no charge. After that it is a new job.</p>
     </section>
 
-    <section>
-      <h2>Privacy</h2>
+    <section aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Privacy</h2>
       <p>We keep the files we need for the job. We do not sell your list or copy. We will not put you in a public case study unless you say so.</p>
-    </section>
-
-    <section class="close">
-      <h2>Talk to us</h2>
-      <p>Write and tell us what you need finished.</p>
-      <p><a href="mailto:meridian.preconstruction@gmail.com">meridian.preconstruction@gmail.com</a></p>
     </section>
   </main>
 </body>
