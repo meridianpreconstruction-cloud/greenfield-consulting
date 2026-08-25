@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atomic Books (sample)</title>
+  <meta name="description" content="Sample offer page by Greenfield Consulting. Not Atomic Books' site. Not a client. Hours, address, and how to get there on one page.">
+  <meta name="theme-color" content="#1b1c19">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <p class="sample">Sample by Greenfield Consulting. Not Atomic Books' site. Not a client.</p>
+
+  <header class="mast">
+    <p class="mark" aria-hidden="true">A</p>
+    <h1>Atomic Books</h1>
+    <p class="place">Falls Road, Baltimore</p>
+  </header>
+
+  <figure class="hero-photo">
+    <img src="pages.jpg" width="1600" height="1066" alt="Stacks of book pages on a table. Sample photo. Not from Atomic Books.">
+  </figure>
+
+  <main>
+    <section class="lede">
+      <p class="kicker">Hours</p>
+      <h2>We are closed Monday, and the other days we open at noon.</h2>
+      <p class="closed">Closed Monday.</p>
+    </section>
+
+    <section class="card shop" aria-labelledby="shop-hours-title">
+      <h3 id="shop-hours-title">Bookstore</h3>
+      <table class="hours">
+        <caption class="sr">Regular bookstore hours</caption>
+        <tbody>
+          <tr data-day="0"><th scope="row">Sunday <span class="when" hidden>today</span></th><td>12pm to 6pm</td></tr>
+          <tr class="off" data-day="1"><th scope="row">Monday <span class="when" hidden>today</span></th><td>Closed</td></tr>
+          <tr data-day="2"><th scope="row">Tuesday <span class="when" hidden>today</span></th><td>12pm to 5pm</td></tr>
+          <tr data-day="3"><th scope="row">Wednesday <span class="when" hidden>today</span></th><td>12pm to 8pm</td></tr>
+          <tr data-day="4"><th scope="row">Thursday <span class="when" hidden>today</span></th><td>12pm to 6pm</td></tr>
+          <tr data-day="5"><th scope="row">Friday <span class="when" hidden>today</span></th><td>12pm to 8pm</td></tr>
+          <tr data-day="6"><th scope="row">Saturday <span class="when" hidden>today</span></th><td>12pm to 8pm</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card bar" aria-labelledby="bar-hours-title">
+      <h3 id="bar-hours-title">Eightbar</h3>
+      <p class="bar-lede">Eightbar keeps its own hours, and they are shorter than the shop. Wednesday and Sunday those hours are for clubs only, so come another night if you are not here for a club.</p>
+      <table class="hours">
+        <caption class="sr">Regular Eightbar hours</caption>
+        <tbody>
+          <tr data-day="3"><th scope="row">Wednesday <span class="when" hidden>today</span></th><td>5pm to 8pm <span class="clubs">clubs only</span></td></tr>
+          <tr data-day="5"><th scope="row">Friday <span class="when" hidden>today</span></th><td>5pm to 8pm</td></tr>
+          <tr data-day="6"><th scope="row">Saturday <span class="when" hidden>today</span></th><td>5pm to 8pm</td></tr>
+          <tr data-day="0"><th scope="row">Sunday <span class="when" hidden>today</span></th><td>3pm to 6pm <span class="clubs">clubs only</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="actions" aria-label="Get here">
+      <p class="addr">3620 Falls Rd., Baltimore, MD 21211</p>
+      <div class="btns">
+        <a class="btn" href="https://maps.google.com/?q=3620+Falls+Rd+Baltimore+MD+21211">Map</a>
+        <a class="btn primary" href="tel:+14106624444">410.662.4444</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="here-title">
+      <h3 id="here-title">Getting here</h3>
+      <p>The shop is at Falls Road and 36th Street. You can come off I-83, or walk about ten minutes from the Light Rail stop at Woodberry.</p>
+    </section>
+
+    <section aria-labelledby="write-title">
+      <h3 id="write-title">Write</h3>
+      <p>For a general question, use <a href="mailto:info@atomicbooks.com">info@atomicbooks.com</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>This page is a sample of a $750 offer page. Greenfield Consulting built it. This is not Atomic Books' site. They are not a client.</p>
+    <p>Hours and address are from their public About page on August 25, 2026. We are not affiliated.</p>
+  </footer>
+
+  <script>
+    (function () {
+      var day = new Date().getDay();
+      var rows = document.querySelectorAll('.hours tr[data-day="' + day + '"]');
+      for (var i = 0; i < rows.length; i++) {
+        rows[i].classList.add("today");
+        var when = rows[i].querySelector(".when");
+        if (when) when.hidden = false;
+      }
+    })();
+  </script>
+</body>
+</html>
