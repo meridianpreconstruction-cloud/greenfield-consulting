@@ -136,6 +136,7 @@ section + section { margin-top: 2.1rem; }
   grid-template-columns: 7.2rem 1fr;
   gap: 1rem;
   margin-top: 2.1rem;
+  margin-bottom: 2.1rem;
   padding: 0.7rem;
   border: 1px solid var(--line);
   background: var(--paper);
