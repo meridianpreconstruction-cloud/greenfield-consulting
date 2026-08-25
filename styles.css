@@ -26,22 +26,15 @@
   font-display: swap;
   src: url("fonts/source-600.woff2") format("woff2");
 }
-@font-face {
-  font-family: "Source Sans 3";
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("fonts/source-400i.woff2") format("woff2");
-}
 
 :root {
-  --bg: #f3efe4;
-  --ink: #1c241c;
-  --paper: #fffaf0;
-  --muted: #5c655c;
-  --line: #d4d0c4;
-  --green: #2c4a3b;
-  --btn: #24382c;
+  --bg: #ebe4d4;
+  --sheet: #f7f1e4;
+  --ink: #1b221b;
+  --paper: #fffaf1;
+  --muted: #5a635a;
+  --line: #cfc6b4;
+  --green: #2a4638;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
@@ -50,67 +43,61 @@ body {
   background: var(--bg);
   color: var(--ink);
   line-height: 1.55;
-  font-size: 1.05rem;
+  font-size: 1.06rem;
+}
+.sheet {
+  width: min(42rem, 100%);
+  margin: 0 auto;
+  background: var(--sheet);
+  min-height: 100vh;
 }
 .mast {
-  padding: 2.3rem 1.4rem 1.5rem;
-  text-align: center;
+  padding: 2.2rem 1.5rem 1.3rem;
 }
 .name {
   margin: 0;
   font-family: "Fraunces", Georgia, serif;
   font-weight: 500;
-  font-size: clamp(1.9rem, 6vw, 2.8rem);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-size: clamp(2rem, 7vw, 2.7rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
 }
 .tag {
-  margin: 0.65rem 0 0;
+  margin: 0.55rem 0 0;
   color: var(--muted);
 }
-.hero-photo { margin: 0; }
-.hero-photo img {
+.portrait { margin: 0; }
+.portrait img {
   display: block;
   width: 100%;
-  height: 16.5rem;
+  height: auto;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
-  object-position: center 45%;
+  object-position: center 40%;
 }
-main {
-  width: min(40rem, calc(100% - 2.4rem));
-  margin: 0 auto;
-  padding: 2.1rem 0 4rem;
+main { padding: 2rem 1.5rem 2.4rem; }
+.lede { margin-bottom: 1.8rem; }
+h1 {
+  margin: 0 0 0.7rem;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(1.65rem, 5vw, 2.05rem);
+  line-height: 1.2;
 }
-.lede { margin-bottom: 1.7rem; }
-.kicker {
-  margin: 0 0 0.45rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
+.lede p { margin: 0; color: var(--muted); }
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--green);
   font-weight: 600;
 }
-h1 {
-  margin: 0;
-  font-family: "Fraunces", Georgia, serif;
-  font-weight: 500;
-  font-size: clamp(1.7rem, 5vw, 2.2rem);
-  line-height: 1.2;
-}
-.sub { margin: 0.7rem 0 0; color: var(--muted); }
-h2 {
-  margin: 0 0 0.7rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 600;
-}
-section + section { margin-top: 2rem; }
+section + section { margin-top: 2.1rem; }
 .card {
   background: var(--paper);
   border: 1px solid var(--line);
-  padding: 1.15rem 1.2rem 1.25rem;
+  padding: 1.2rem 1.25rem 1.3rem;
 }
 .prices {
   list-style: none;
@@ -118,38 +105,65 @@ section + section { margin-top: 2rem; }
   padding: 0;
 }
 .prices li {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
   padding: 0.95rem 0;
   border-bottom: 1px solid var(--line);
+  align-items: start;
 }
-.prices li:first-child { padding-top: 0.15rem; }
+.prices li:first-child { padding-top: 0.1rem; }
 .prices li:last-child { border-bottom: 0; }
 .prices b {
   display: block;
   font-weight: 600;
+  margin-bottom: 0.15rem;
 }
-.prices i {
-  display: block;
-  font-style: normal;
-  color: var(--muted);
-  font-size: 0.95rem;
-  margin-top: 0.2rem;
-}
+.prices span { color: var(--muted); }
+.prices b { color: var(--ink); }
 .prices strong {
   font-family: "Fraunces", Georgia, serif;
   font-weight: 500;
-  font-size: 1.25rem;
-  white-space: nowrap;
+  font-size: 1.3rem;
 }
 .note {
-  margin: 0.85rem 0 0;
+  margin: 0.9rem 0 0;
   color: var(--muted);
   font-size: 0.95rem;
 }
-section p { margin: 0; }
-.more { margin-top: 0.8rem; }
+.sample {
+  display: grid;
+  grid-template-columns: 7.2rem 1fr;
+  gap: 1rem;
+  margin-top: 2.1rem;
+  padding: 0.7rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  text-decoration: none;
+  color: inherit;
+}
+.sample img {
+  width: 100%;
+  height: 7.2rem;
+  object-fit: cover;
+  object-position: center 40%;
+}
+.sample b {
+  display: block;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+  color: var(--ink);
+}
+.sample span { color: var(--muted); font-size: 0.95rem; }
+.sample em {
+  display: block;
+  margin-top: 0.45rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--green);
+}
 .steps {
   margin: 0;
   padding: 0;
@@ -158,7 +172,7 @@ section p { margin: 0; }
 }
 .steps li {
   counter-increment: step;
-  padding: 0.65rem 0 0.65rem 2.1rem;
+  padding: 0.7rem 0 0.7rem 2rem;
   border-bottom: 1px solid var(--line);
   position: relative;
 }
@@ -167,34 +181,50 @@ section p { margin: 0; }
   content: counter(step);
   position: absolute;
   left: 0;
-  top: 0.65rem;
+  top: 0.7rem;
   font-family: "Fraunces", Georgia, serif;
   color: var(--green);
 }
-.addr {
+.close p {
+  margin: 0 0 1rem;
   font-family: "Fraunces", Georgia, serif;
   font-size: 1.25rem;
-  margin: 0 0 0.9rem;
 }
 .btn {
   display: inline-block;
   text-decoration: none;
-  background: var(--btn);
-  color: var(--bg);
-  padding: 0.78rem 1.1rem;
+  background: var(--green);
+  color: var(--sheet);
+  padding: 0.8rem 1.2rem;
   font-weight: 600;
-  min-height: 2.75rem;
+  min-height: 2.8rem;
 }
-a { color: var(--green); }
 .btn:focus-visible,
+.sample:focus-visible,
 a:focus-visible {
   outline: 2px solid var(--green);
   outline-offset: 3px;
 }
-#refunds p, section p { color: var(--ink); }
+footer {
+  padding: 1.3rem 1.5rem 2.4rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+footer p { margin: 0 0 0.65rem; }
+footer p:last-child { margin: 0; }
 
 @media (min-width: 720px) {
-  .hero-photo img { height: 22rem; }
+  body { padding: 2.4rem 0; }
+  .sheet { box-shadow: 0 0 0 1px var(--line); }
+  .mast, main { padding-left: 2.1rem; padding-right: 2.1rem; }
+  footer { padding-left: 2.1rem; padding-right: 2.1rem; }
+  .sample { grid-template-columns: 9rem 1fr; }
+  .sample img { height: 9rem; }
+}
+@media (max-width: 520px) {
+  .sample { grid-template-columns: 1fr; }
+  .sample img { height: 10rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto; }
